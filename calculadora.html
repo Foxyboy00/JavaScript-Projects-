@@ -1,0 +1,38 @@
+<script>
+
+let primeiroNumero = prompt('Insira seu primeiro número:')
+
+let sinal = prompt('Insira o sinal:')
+
+//Enquanto o sinal for diferente de: +, - multiplicação, divisão, entre no erro:
+while(sinal != '+' && sinal != '-' && sinal != '*' && sinal != '/'){
+    alert('Insira um sinal válido.')
+    sinal = prompt('Insira o sinal:')
+}
+
+let numeroFinal = prompt('Insira o segundo número')
+
+
+//Convertendo string para número;
+primeiroNumero = parseInt(primeiroNumero)
+numeroFinal = parseInt(numeroFinal)
+
+let resultado = 0;
+
+if(sinal == '+'){
+    resultado = primeiroNumero + numeroFinal;
+}
+else if(sinal == '-'){
+    resultado = primeiroNumero - numeroFinal
+}
+else if(sinal == '*'){
+    resultado = primeiroNumero * numeroFinal
+}
+else if(sinal == '/'){
+    resultado = primeiroNumero / numeroFinal
+}
+
+alert('Valor: ' + resultado)
+
+
+</script>
